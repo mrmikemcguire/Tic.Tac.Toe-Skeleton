@@ -3,7 +3,7 @@ public class Board
 	{	
 	static String [][] board;
 	
-	public static void createBlankBoard()
+	public static void fillBoardWithBlankSpaces()
 		{
 		board = new String [3][3];
 		for(int i=0;i<3;i++)
@@ -15,7 +15,7 @@ public class Board
 			}
 		}
 	
-	public static void printBoard()
+	public static void displayBoard()
 		{
 		System.out.println("    1   2   3");
 		System.out.println("  -------------");
@@ -27,7 +27,7 @@ public class Board
 		System.out.println("  -------------");
 		System.out.println();
 		}	
-	public static boolean checkForWonGame()
+	public static boolean isWonGame()
 		{
 		if ((board[0][0].equals(board[0][1]) && board[0][1].equals(board[0][2]) && !board[0][1].equals(" ")) ||
 			(board[1][0].equals(board[1][1]) && board[1][1].equals(board[1][2]) && !board[1][1].equals(" ")) ||

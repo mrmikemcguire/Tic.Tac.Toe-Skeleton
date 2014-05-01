@@ -7,19 +7,19 @@ public class PlayGame
 
 	public static void main(String[] args)
 		{
-		Board.createBlankBoard();
-		Board.printBoard();
+		Board.fillBoardWithBlankSpaces();
+		Board.displayBoard();
 		HumanPlayer.choosePlayerMarker();
 		
-		while (!Board.checkForWonGame())
+		while (!Board.isWonGame())
 			{
 			HumanPlayer.inputPlayerMove();
 			Board.board[currentRowPlay][currentColumnPlay] = HumanPlayer.playerMarker;
-			Board.printBoard();
+			Board.displayBoard();
 			
 			ComputerPlayer.computerMove();
 			Board.board[currentRowPlay][currentColumnPlay] = HumanPlayer.computerMarker;
-			Board.printBoard();
+			Board.displayBoard();
 			}
 		}
 	
